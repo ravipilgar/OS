@@ -1,0 +1,416 @@
+Question 1 :
+ravi@ubuntu:~$ date
+Mon 07 Sep 2020 09:31:28 AM PDT
+ravi@ubuntu:~$ cal
+   September 2020     
+Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28 29 30           
+                      
+ravi@ubuntu:~$ bc
+bc 1.07.1
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'. 
+quit
+
+ravi@ubuntu:~$ echo Ravi
+Ravi
+
+ravi@ubuntu:~$ who
+ravi :0           2020-09-07 09:26 (:0)
+
+ravi@ubuntu:~$ whoami
+ravi
+
+ravi@ubuntu:~$ logname
+ravi
+
+ravi@ubuntu:~$ uname
+Linux
+ravi@ubuntu:~$ seq 1 2 10
+1
+3
+5
+7
+9
+
+ravi@ubuntu:~$ clear
+
+-----------------------------------------------------------------------------------------------
+
+Question 2 :
+ravi@ubuntu:~$ mkdir a b c
+ravi@ubuntu:~$ touch a/a.txt b/b.txt c/c.txt
+ravi@ubuntu:~$ cp c a
+ravi@ubuntu:~$ cp -r c a
+
+ravi@ubuntu:~$ mv b c
+
+ravi@ubuntu:~$ alias Ravi='ls -lh'
+ravi@ubuntu:~$ Ravi
+total 44K
+drwxrwxr-x 3 ravi ravi 4.0K Sep  7 09:48 a
+-rw-rw-r-- 1 ravi ravi 1.1K Sep  7 09:48 Assignment1
+drwxrwxr-x 3 ravi ravi 4.0K Sep  7 09:48 c
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Desktop
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Documents
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Downloads
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Music
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Pictures
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Public
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Templates
+drwxr-xr-x 2 ravi ravi 4.0K Sep  7 08:52 Videos
+
+ravi@ubuntu:~$ mv a cdac
+
+----------------------------------------------------------------------------------------------
+Question 3 :
+ravi@ubuntu:~$ cat file1.txt > file2.txt
+ravi@ubuntu:~$ cat file2.txt 
+This a new File
+Writing and copying the contents of file to another file using cat command.
+ravi@ubuntu:~$ cat file1.txt > file3.txt
+ravi@ubuntu:~$ cat file1.txt > file4.txt
+ravi@ubuntu:~$ cat file1.txt > file5.txt
+ravi@ubuntu:~$ cat file?.txt
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+ravi@ubuntu:~$ cat file?.txt | grep 's'
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+This a new File
+Writing and copying the contents of file to another file using cat command.
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ cat > file.txt
+ravi@ubuntu:~$ nano file.txt
+ravi@ubuntu:~$ cat file.txt
+Hi I'm editing this file using nano editor.
+This is Fun!
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ touch file1.txt file2.txt file3.txt file4.txt file5.txt
+
+ravi@ubuntu:~$ rm -rf cdac c
+ravi@ubuntu:~$ ls
+
+------------------------------------------------------------------------------------------
+
+Question 3 :
+ravi@ubuntu:~$ vi file1.txt
+
+ravi@ubuntu:~$ cat file1.txt 
+HI IM EDITING THIS FILE IN VI AND IT IS NOT FUN
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ cat -n file1.txt 
+     1	HI IM EDITING THIS FILE IN VI AND IT IS NOT FUN
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ cat file1.txt 
+HI IM EDITING THIS FILE IN VI AND IT IS NOT FUN
+Hello this is another line
+and a new line
+another line again
+ravi@ubuntu:~$ tac file1.txt 
+another line again
+and a new line
+Hello this is another line
+HI IM EDITING THIS FILE IN VI AND IT IS NOT FUN
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ cat file1.txt 
+This a new File
+Writing and copying the contents of file to another file using cat command.
+ravi@ubuntu:~$ cat file1.txt > file2.txt
+ravi@ubuntu:~$ cat file1.txt file2.txt > file3.txt
+ravi@ubuntu:~$ cat file3.txt
+This a new File
+Writing and copying the contents of file to another file using cat command.This a new File
+Writing and copying the contents of file to another file using cat command.
+
+------------------------------------------------------------------------------------------
+
+Question 5 :
+
+ravi@ubuntu:~$ paste file1.txt file2.txt | pr -T -e10
+One       Eight
+Two       Eleven
+Three     Five
+Four      Four
+Five      Nine
+Six       One
+Seven     Seven
+Eight     Six
+Nine      Ten
+Ten       Thirteen
+Eleven    Three
+Twelve    Twelve
+Thirteen  Two
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ mkdir -p dir1/newdir dir2
+ravi@ubuntu:~$ 
+ravi@ubuntu:~$ touch dir1/newfile dir1/newdir/newfile2
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ cat > file.txt 
+a  
+c
+e
+f
+b
+d
+g
+m
+i
+h
+ravi@ubuntu:~$ sort file.txt 
+a
+b
+c
+d
+e
+f
+g
+h
+i
+m
+ravi@ubuntu:~$ sort -r file.txt 
+m
+i
+h
+g
+f
+e
+d
+c
+b
+a
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ touch .a.txt
+ravi@ubuntu:~$ ls
+Assignment1  dir1  Documents  file.txt  Pictures  Templates
+Desktop      dir2  Downloads  Music     Public    Videos
+ravi@ubuntu:~$ ls -a
+.              .bash_logout  dir1       .gnupg    Pictures                   Templates
+..             .bashrc       dir2       .lesshst  .profile                   Videos
+Assignment1    .cache        Documents  .local    Public
+.a.txt         .config       Downloads  .mozilla  .ssh
+.bash_history  Desktop       file.txt   Music     .sudo_as_admin_successful
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ touch -d "Sun, 19 May 1996" newfile.txt
+ravi@ubuntu:~$ ls -l newfile.txt 
+-rw-rw-r-- 1 ravi ravi 0 May 19  1996 newfile.txt
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ ls -r
+Videos     Public    newfile.txt  file.txt   Documents  dir1     Assignment1
+Templates  Pictures  Music        Downloads  dir2       Desktop
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ ls -l
+total 52
+-rw-rw-r-- 1 ravi ravi 5091 Sep  7 11:15 Assignment1
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Desktop
+drwxrwxr-x 3 ravi ravi 4096 Sep  7 11:15 dir1
+drwxrwxr-x 2 ravi ravi 4096 Sep  7 11:13 dir2
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Documents
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Downloads
+-rw-rw-r-- 1 ravi ravi   20 Sep  7 11:20 file.txt
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Music
+-rw-rw-r-- 1 ravi ravi    0 May 19  1996 newfile.txt
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Pictures
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Public
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Templates
+drwxr-xr-x 2 ravi ravi 4096 Sep  7 08:52 Videos
+ravi@ubuntu:~$ 
+
+ravi@ubuntu:~$ ls -ld
+drwxr-xr-x 18 ravi ravi 4096 Sep  7 11:29 .
+
+
+
+=============================================================================================
+=============================================================================================
+
+Question 1 :
+ravi@ubuntu:~$ mkdir Ravi
+ravi@ubuntu:~$ touch Ravi/a.txt Ravi/b.txt Ravi/c.txt Ravi/d.txt
+ravi@ubuntu:~$ cd Ravi
+ravi@ubuntu:~/Ravi$ chmod 600 a.txt b.txt 
+ravi@ubuntu:~/Ravi$ chmod 200 c.txt 
+ravi@ubuntu:~/Ravi$ cat > d.txt
+#/bin/sh
+ls -lh
+ravi@ubuntu:~/Ravi$ chmod 100 d.txt
+ravi@ubuntu:~/Ravi$ ls -l
+total 4
+-rw------- 1 ravi ravi  0 Sep  8 02:56 a.txt
+-rw------- 1 ravi ravi  0 Sep  8 02:56 b.txt
+--w------- 1 ravi ravi  0 Sep  8 02:56 c.txt
+---x------ 1 ravi ravi 16 Sep  8 02:59 d.txt
+ravi@ubuntu:~/Ravi$ 
+
+Question 2 :
+ravi@ubuntu:~$ chmod 111 newdir/
+ravi@ubuntu:~$ ls -l
+total 44
+d--x--x--x 2 ravi ravi 4096 Sep  8 02:36 newdir
+
+
+Question 3:
+ravi@ubuntu:~$ chmod 444 newdir/
+ravi@ubuntu:~$ ls -l
+total 44
+dr--r--r-- 2 ravi ravi 4096 Sep  8 02:36 newdir
+
+Question 4:
+ravi@ubuntu:~$ echo *
+Assignment1 Desktop Documents Downloads Music newdir Pictures Public Templates Videos
+
+Question 5:
+ravi@ubuntu:~$ echo /etc/*
+/etc/acpi /etc/adduser.conf /etc/alsa /etc/alternatives /etc/anacrontab /etc/apg.conf /etc/apm /etc/apparmor /etc/apparmor.d /etc/apport /etc/appstream.conf /etc/apt /etc/avahi /etc/bash.bashrc /etc/bash_completion /etc/bash_completion.d /etc/bindresvport.blacklist /etc/binfmt.d /etc/bluetooth /etc/brlapi.key /etc/brltty /etc/brltty.conf /etc/ca-certificates /etc/ca-certificates.conf /etc/ca-certificates.conf.dpkg-old /etc/calendar /etc/chatscripts /etc/console-setup /etc/cracklib /etc/cron.d /etc/cron.daily /etc/cron.hourly /etc/cron.monthly /etc/crontab /etc/cron.weekly /etc/cups /etc/cupshelpers /etc/dbus-1 /etc/dconf /etc/debconf.conf /etc/debian_version /etc/default /etc/deluser.conf /etc/depmod.d /etc/dhcp /etc/dictionaries-common /etc/dpkg /etc/e2scrub.conf /etc/emacs /etc/environment /etc/environment.d /etc/ethertypes /etc/firefox /etc/fonts /etc/fprintd.conf /etc/fstab /etc/fuse.conf /etc/fwupd /etc/gai.conf /etc/gamemode.ini /etc/gdb /etc/gdm3 /etc/geoclue /etc/ghostscript /etc/glvnd /etc/gnome /etc/groff /etc/group /etc/group- /etc/grub.d /etc/gshadow /etc/gshadow- /etc/gss /etc/gtk-2.0 /etc/gtk-3.0 /etc/hdparm.conf /etc/host.conf /etc/hostid /etc/hostname /etc/hosts /etc/hosts.allow /etc/hosts.deny /etc/hp /etc/ifplugd /etc/init /etc/init.d /etc/initramfs-tools /etc/inputrc /etc/insserv.conf.d /etc/iproute2 /etc/issue /etc/issue.net /etc/kernel /etc/kernel-img.conf /etc/kerneloops.conf /etc/ldap /etc/ld.so.cache /etc/ld.so.conf /etc/ld.so.conf.d /etc/legal /etc/libao.conf /etc/libaudit.conf /etc/libblockdev /etc/libnl-3 /etc/libpaper.d /etc/libreoffice /etc/locale.alias /etc/locale.gen /etc/localtime /etc/logcheck /etc/login.defs /etc/logrotate.conf /etc/logrotate.d /etc/lsb-release /etc/ltrace.conf /etc/machine-id /etc/magic /etc/magic.mime /etc/mailcap /etc/mailcap.order /etc/manpath.config /etc/mime.types /etc/mke2fs.conf /etc/modprobe.d /etc/modules /etc/modules-load.d /etc/mtab /etc/mtools.conf /etc/mysql /etc/nanorc /etc/netplan /etc/network /etc/networkd-dispatcher /etc/NetworkManager /etc/networks /etc/newt /etc/nsswitch.conf /etc/openvpn /etc/opt /etc/os-release /etc/PackageKit /etc/pam.conf /etc/pam.d /etc/papersize /etc/passwd /etc/passwd- /etc/pcmcia /etc/perl /etc/pki /etc/pm /etc/pnm2ppa.conf /etc/polkit-1 /etc/popularity-contest.conf /etc/ppp /etc/profile /etc/profile.d /etc/protocols /etc/pulse /etc/python3 /etc/python3.8 /etc/rc0.d /etc/rc1.d /etc/rc2.d /etc/rc3.d /etc/rc4.d /etc/rc5.d /etc/rc6.d /etc/rc.local /etc/rcS.d /etc/resolv.conf /etc/rmt /etc/rpc /etc/rsyslog.conf /etc/rsyslog.d /etc/rygel.conf /etc/sane.d /etc/security /etc/selinux /etc/sensors3.conf /etc/sensors.d /etc/services /etc/sgml /etc/shadow /etc/shadow- /etc/shells /etc/skel /etc/snmp /etc/speech-dispatcher /etc/ssh /etc/ssl /etc/subgid /etc/subgid- /etc/subuid /etc/subuid- /etc/sudoers /etc/sudoers.d /etc/sysctl.conf /etc/sysctl.d /etc/systemd /etc/terminfo /etc/thermald /etc/thunderbird /etc/timezone /etc/tmpfiles.d /etc/ubuntu-advantage /etc/ucf.conf /etc/udev /etc/udisks2 /etc/ufw /etc/update-manager /etc/update-motd.d /etc/update-notifier /etc/UPower /etc/usb_modeswitch.conf /etc/usb_modeswitch.d /etc/vim /etc/vmware-tools /etc/vtrgb /etc/vulkan /etc/wgetrc /etc/wpa_supplicant /etc/X11 /etc/xattr.conf /etc/xdg /etc/xml /etc/zsh_command_not_found
+ravi@ubuntu:~$ 
+
+Question 6 :
+ravi@ubuntu:~$ echo /etc/*.conf
+/etc/adduser.conf /etc/apg.conf /etc/appstream.conf /etc/brltty.conf /etc/ca-certificates.conf /etc/debconf.conf /etc/deluser.conf /etc/e2scrub.conf /etc/fprintd.conf /etc/fuse.conf /etc/gai.conf /etc/hdparm.conf /etc/host.conf /etc/kernel-img.conf /etc/kerneloops.conf /etc/ld.so.conf /etc/libao.conf /etc/libaudit.conf /etc/logrotate.conf /etc/ltrace.conf /etc/mke2fs.conf /etc/mtools.conf /etc/nsswitch.conf /etc/pam.conf /etc/pnm2ppa.conf /etc/popularity-contest.conf /etc/resolv.conf /etc/rsyslog.conf /etc/rygel.conf /etc/sensors3.conf /etc/sysctl.conf /etc/ucf.conf /etc/usb_modeswitch.conf /etc/xattr.conf
+ravi@ubuntu:~$ 
+
+Question 7 :
+ravi@ubuntu:~$ touch a.txt
+ravi@ubuntu:~$ echo Ravi > a.txt
+ravi@ubuntu:~$ cat a.txt
+Ravi
+ravi@ubuntu:~$ 
+
+
+==============================================================================================
+==============================================================================================
+
+Question 1 :
+ravi@ubuntu:~$ mkdir -p a/b/c
+ravi@ubuntu:~$ touch a/.a a/b/.b a/b/.c
+ravi@ubuntu:~$ touch a/a a/b/b a/b/c/c
+ravi@ubuntu:~$ cp -r a/b/c a
+ravi@ubuntu:~$ cp a/a a/b
+
+Question 2 :
+ravi@ubuntu:~$ chmod 400 a/b/c
+
+Question 3 :
+ravi@ubuntu:~$ cp -r a/b/c .
+ravi@ubuntu:~$ ls
+a  Assignment1  c  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+ravi@ubuntu:~$ 
+
+Question 4 :
+ravi@ubuntu:~/a$ mkdir b/data
+
+Question 5 :
+ravi@ubuntu:~/a$ chmod 666 b
+
+
+Question 6 :
+ravi@ubuntu:~/a$ sudo mkdir b/data2
+
+Question 7 :
+ravi@ubuntu:~/a$ touch b/data.txt
+
+Question 8 :
+ravi@ubuntu:~/a$ mv b/c b/copied_dir
+
+Question 9 : 
+ravi@ubuntu:~/a$ chmod 111 b/copied_dir
+
+Question 10 :
+ravi@ubuntu:~/a$ ls b/copied_dir/
+ls: cannot open directory 'b/copied_dir/': Permission denied
+ravi@ubuntu:~/a$ 
+
+
+Question 11 :
+ravi@ubuntu:~/a$ mv b/copied_dir/ ..
+mv: cannot move 'b/copied_dir/' to '../copied_dir': Permission denied
+
+
+Question 12 :
+ravi@ubuntu:~/a$ mv b/data ..
+ravi@ubuntu:~/a$ ls ~
+a  Assignment1  c  data  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+ravi@ubuntu:~/a$ 
+
+
+Question 13 :
+ravi@ubuntu:~$ sudo chown root a
+ravi@ubuntu:~$ ls -l
+
+Question 14 :
+ravi@ubuntu:~$ sudo chmod 700 a
+
+Question 15 :
+ravi@ubuntu:~$ sudo mkdir a/dir_sample
+
+Question 16 :
+ravi@ubuntu:~/a$ mkdir ../x
+
+Question 17 :
+ravi@ubuntu:~$ mv x a
+
+Question 18 :
+ravi@ubuntu:~$ mkdir movies
+
+Quesiton 19 :
+ravi@ubuntu:~$ chgrp sudo movies
+
+Question 20 :
+ravi@ubuntu:~$ sudo chgrp avahi movies
+
+
+Question 21 :
+ravi@ubuntu:~$ sudo chown root movies
+ravi@ubuntu:~$ sudo chmod 777 movies
+
+Question 22 :
+ravi@ubuntu:~$ chmod 777 movies
+chmod: changing permissions of 'movies': Operation not permitted
+ravi@ubuntu:~$ 
+
+
+Question 23 :
+ravi@ubuntu:~$ sudo chown root movies
+ravi@ubuntu:~$ sudo chgrp root movies
+
+Question 24 :
+ravi@ubuntu:~$ chmod 111 movies
+chmod: changing permissions of 'movies': Operation not permitted
+ravi@ubuntu:~$ sudo chmod 771 movies
+ravi@ubuntu:~$ 
+
+
+Question 25 :
+ravi@ubuntu:~$ rm -rf movies
+
+
